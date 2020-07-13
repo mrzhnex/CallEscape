@@ -14,7 +14,6 @@ namespace CallEscape
             Events.RoundStartEvent += SetEvents.OnRoundStart;
             Events.ConsoleCommandEvent += SetEvents.OnCallCommand;
             Events.CheckEscapeEvent += SetEvents.OnCheckEscape;
-            Events.PlayerSpawnEvent += SetEvents.OnPlayerSpawn;
             Log.Info(getName + " on");
         }
 
@@ -24,7 +23,6 @@ namespace CallEscape
             Events.RoundStartEvent -= SetEvents.OnRoundStart;
             Events.ConsoleCommandEvent -= SetEvents.OnCallCommand;
             Events.CheckEscapeEvent -= SetEvents.OnCheckEscape;
-            Events.PlayerSpawnEvent -= SetEvents.OnPlayerSpawn;
             Log.Info(getName + " off");
         }
 

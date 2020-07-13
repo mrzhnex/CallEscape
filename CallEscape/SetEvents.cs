@@ -42,32 +42,6 @@ namespace CallEscape
                 return;
             }
         }
-        internal void OnPlayerSpawn(PlayerSpawnEvent ev)
-        {
-            if (ev.Player.GetRole() == RoleType.FacilityGuard)
-            {
-                if (ev.Player.gameObject.GetComponent<SetRoleOnSpawn>())
-                    Object.Destroy(ev.Player.gameObject.GetComponent<SetRoleOnSpawn>());
-                ev.Player.gameObject.AddComponent<SetRoleOnSpawn>();
-                ev.Player.gameObject.GetComponent<SetRoleOnSpawn>().RemoveItems.Add(ItemType.KeycardGuard);
-                ev.Player.gameObject.GetComponent<SetRoleOnSpawn>().RemoveItems.Add(ItemType.WeaponManagerTablet);
-                ev.Player.gameObject.GetComponent<SetRoleOnSpawn>().AddItems.Add(ItemType.KeycardSeniorGuard);
-            }
-            if (ev.Player.GetRole() == RoleType.NtfCadet || ev.Player.GetRole() == RoleType.NtfLieutenant)
-            {
-                if (ev.Player.gameObject.GetComponent<SetRoleOnSpawn>())
-                    Object.Destroy(ev.Player.gameObject.GetComponent<SetRoleOnSpawn>());
-                ev.Player.gameObject.AddComponent<SetRoleOnSpawn>();
-                ev.Player.gameObject.GetComponent<SetRoleOnSpawn>().RemoveItems.Add(ItemType.WeaponManagerTablet);
-            }
-            if (ev.Player.GetRole() == RoleType.ChaosInsurgency)
-            {
-                if (ev.Player.gameObject.GetComponent<SetRoleOnSpawn>())
-                    Object.Destroy(ev.Player.gameObject.GetComponent<SetRoleOnSpawn>());
-                ev.Player.gameObject.AddComponent<SetRoleOnSpawn>();
-                ev.Player.gameObject.GetComponent<SetRoleOnSpawn>().AddItems.Add(ItemType.Radio);
-            }
-        }
 
         internal void OnCheckEscape(ref CheckEscapeEvent ev)
         {

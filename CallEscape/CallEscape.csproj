@@ -80,7 +80,6 @@
     <Compile Include="MainSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetEvents.cs" />
-    <Compile Include="SetRoleOnSpawn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
