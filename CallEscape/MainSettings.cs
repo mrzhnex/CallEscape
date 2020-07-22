@@ -4,8 +4,8 @@ namespace CallEscape
 {
     public class MainSettings : Plugin
     {
-        public override string getName => "CallEscape";
-        private SetEvents SetEvents;
+        public override string getName => nameof(CallEscape);
+        public SetEvents SetEvents { get; set; }
 
         public override void OnEnable()
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CallEscape
 {
-    internal class SetEvents
+    public class SetEvents
     {
         public void OnCallCommand(ConsoleCommandEvent ev)
         {
